@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleAccordion Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/accordion.css">
+</head>
+<body>
+    <div class="acc-wrapper_name">
+        <h1>Accordion Demo</h1>
+
+        <h2>Basic Accordion (modal: true)</h2>
+        <div class="acc--wrapper gap-v_16" data-accordion="faq">
+            <div class="acc--item">
+                <button class="acc--header">
+                    What is SimpleAccordion?
+                    <div class="acc--icon" data-icon-anim="rotate">▲</div>
+                </button>
+                <div class="acc--content">
+                    <div class="acc--content_wrapper">
+                        <p>It's a minimal, modular jQuery-based accordion component.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="acc--item">
+                <button class="acc--header">
+                    Is it fast?
+                    <div class="acc--icon" data-icon-anim="rotate">▲</div>
+                </button>
+                <div class="acc--content">
+                    <div class="acc--content_wrapper">
+                        <p>Yes. Pure jQuery + no layout jumps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h2>Accordion with Plus/Minus Icon</h2>
+        <div class="acc--wrapper gap-v_16" data-accordion="files">
+            <div class="acc--item">
+                <button class="acc--header">
+                    Folder A
+                    <div class="acc--icon" data-icon-anim="plus-minus">
+                        <span class="acc--icon_line acc-icon_horizontal"></span>
+                        <span class="acc--icon_line acc-icon_vertical"></span>
+                    </div>
+                </button>
+                <div class="acc--content">
+                    <div class="acc--content_wrapper">
+                        <p>File list goes here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h2>Nested Accordion</h2>
+        <div class="acc--wrapper gap-v_16" data-accordion="default">
+            <div class="acc--item">
+                <button class="acc--header">Parent Item</button>
+                <div class="acc--content">
+                    <div class="acc--content_wrapper">
+                        <div class="acc--wrapper gap-v_16" data-accordion="default">
+                            <div class="acc--item">
+                                <button class="acc--header nested">Nested Item</button>
+                                <div class="acc--content">
+                                    <div class="acc--content_wrapper nested">
+                                        <p>Nested content here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc--item">
+                                <button class="acc--header nested">Nested Item</button>
+                                <div class="acc--content">
+                                    <div class="acc--content_wrapper nested">
+                                        <p>Nested content here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc--item">
+                                <button class="acc--header nested">Nested Item</button>
+                                <div class="acc--content">
+                                    <div class="acc--content_wrapper nested">
+                                        <p>Nested content here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+<!-- Load jQuery FIRST -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Core -->
+<script src="../build/SimpleAccordion.min.js"></script>
+
+<!-- Optional Modules -->
+<script src="../build/setupIconsDefault.min.js"></script>
+<script src="../build/setupIconsRotation.min.js"></script>
+<script src="../build/setupAccessibility.min.js"></script>
+
+<!-- Main Config and Initialization -->
+<script src="../accordionConfig.js"></script>
+
+</body>
+</html>
